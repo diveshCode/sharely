@@ -76,7 +76,8 @@ function updateCommentCount(postId) {
 
 
 function renderPosts(posts, postSection) {
-    console.log("this funtion is renderPosts.")
+    // console.log("this funtion is renderPosts.")
+    console.log(posts)
     if (!postSection) return;
 
     // postSection.innerHTML = "";
@@ -96,7 +97,7 @@ function renderPosts(posts, postSection) {
 
                     ${
                         post.profile_image
-                        ? `<img class="post-pic" src="${base}${post.profile_image}" />`
+                        ? `<img class="post-pic" src="${post.profile_image}" />`
                         : `<i class="fa-solid fa-circle-user"></i>`
                     }
 

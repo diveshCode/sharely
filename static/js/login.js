@@ -1,7 +1,5 @@
-// const API = "https://shareit-42a7.onrender.com/api";
 
 function login() {
-    console.log(API)
     
     fetch(`${API}/token/`, {
         method: "POST",
@@ -20,7 +18,6 @@ function login() {
     })
 
     .then(data => {
-        localStorage.setItem("access", data.access);
         window.location.href = "/";
 
     })

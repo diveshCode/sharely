@@ -39,15 +39,14 @@ function profile() {
         document.getElementById("bio").innerText = data.bio || "";
     
         const profileImg = document.getElementById("user-profile");
-
+        localStorage.setItem("username", data.username);
         if (data.profile_image) {
-            profileImg.src = data.profile_image;
+            profileImg.src = `${base}${data.profile_image}`;
         } else {
             profileImg.src =
                 "https://cdn-icons-png.flaticon.com/128/9131/9131646.png";
         }
         const postSection = document.getElementById("post")
-        console.log("Profile post "+data.posts)
         allPosts = data.posts
         renderPosts(allPosts,postSection);
     })
